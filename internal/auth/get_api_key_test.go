@@ -17,7 +17,7 @@ func TestGetAPIKey(t *testing.T) {
 			headers: http.Header{
 				"Authorization": []string{"ApiKey secret_token_123"},
 			},
-			wantAPIKey:    "WRONG_TOKEN_ON_PURPOSE",
+			wantAPIKey:    "secret_token_123",
 			wantErrExpect: nil,
 		},
 		"No Authorization Header": {
